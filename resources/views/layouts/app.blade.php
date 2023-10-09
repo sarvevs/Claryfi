@@ -19,15 +19,6 @@
 </head>
 <body>
     <div id="app">
-
-{{--        <CalculateComponent></CalculateComponent>--}}
-{{--        <calculate-component></calculate-component>--}}
-{{--        <ResultComponent--}}
-{{--            v-if="showResult"--}}
-{{--            :selected-company="selectedCompany"--}}
-{{--            :shipping-cost="shippingCost"--}}
-{{--        ></ResultComponent>--}}
-
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -107,34 +98,10 @@
                         if(response.selectedCompany){
                             $('#message').html('Вы выбрали компанию: ' + response.selectedCompany + '<br>Стоимость доставки: ' + response.shippingCost  )
                         }
-                        // if(data.success === 'success'){
-                        //     $('#message').html(data.shippingCost)
-                        // }
                     },
                 })
             })
         });
     </script>
-{{--<script>--}}
-{{--    $.ajax({--}}
-{{--        type: 'POST',--}}
-{{--        dataType: "json",--}}
-{{--        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},--}}
-{{--        data: {--}}
-{{--            company: $('#company').val(),--}}
-{{--            weight: $('#weight').val(),--}}
-{{--        },--}}
-{{--        url: "{{ route('calculate') }}",--}}
-{{--        success: function (response) {--}}
-{{--            console.log(response);--}}
-{{--            if (response.selectedCompany) {--}}
-{{--                $('#message').html('Вы выбрали компанию: ' + response.selectedCompany + '<br>Стоимость доставки: ' + response.shippingCost  );--}}
-{{--            }--}}
-{{--        },--}}
-{{--        error: function (xhr, status, error) {--}}
-{{--            console.error(error);--}}
-{{--        }--}}
-{{--    });--}}
-{{--</script>--}}
 </body>
 </html>
